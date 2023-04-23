@@ -1,0 +1,82 @@
+*{
+    background: #0e0814;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 100vw;
+    min-height: 90vh;
+}
+
+button{
+    background: none;
+    color: #d552b0;
+    border: 2px solid #d552b0 ;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 2.0rem;
+    padding: 20px 40px;
+    transition: color 0.5s, border-color 0.5s, box-shadow 0.5s, transform 0.5s;
+}
+
+button:hover{
+  color: #fff;
+  border-color: #56aff8;
+  box-shadow: 0 40px 40px -20px #56aff8;  
+  transform: translateY(-10px);
+  cursor: pointer;  
+}
+
+footer p{
+    font-family: 'Share Tech Mono', monospace;
+    color: #d552b0;  
+    text-align: right;
+    padding-right: 20px;
+}
+
+@keyframes movement1 {
+    from {background: #d552b0;}
+    to {background: #56aff8;
+        transform: translateY(100px);}
+}
+
+@keyframes movement2 {
+    from {background: #56aff8;}
+    to {background: #d552b0;
+        transform: translateY(-100px);}
+}
+
+#animation1{
+    background-color: #d552b0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 30px;
+    transform: translateY(-100px);
+
+    animation: movement1 5s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#animation2{
+    background-color: #56aff8;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 30px;
+    transform: translateY(100px);
+
+    animation: movement2 5s ;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
